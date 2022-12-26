@@ -15,7 +15,7 @@ body{
     color: white;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 100px 100px 1fr 2fr;
+    grid-template-rows: 100px 100px 1fr 3fr;
     font-size: 30px;
     align-items: center;
     justify-items: center;

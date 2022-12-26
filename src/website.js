@@ -53,8 +53,28 @@ function addIcon(descInput) {
   const image = document.createElement('img');
   if (descInput === 'Clear') {
     image.src = '/Users/alex/repos/weatherApp/icons/clear-icon.png';
-    image.style.height = '100px';
-    image.style.width = '100px';
+    image.style.height = '75px';
+    image.style.width = '75px';
+    image.style.padding = '50px';
+  } else if (descInput === 'Thunderstorm') {
+    image.src = '/Users/alex/repos/weatherApp/icons/storms-icon.png';
+    image.style.height = '75px';
+    image.style.width = '75px';
+    image.style.padding = '50px';
+  } else if (descInput === 'Drizzle' || descInput === 'Rain') {
+    image.src = '/Users/alex/repos/weatherApp/icons/rain-icon.png';
+    image.style.height = '75px';
+    image.style.width = '75px';
+    image.style.padding = '50px';
+  } else if (descInput === 'Snow') {
+    image.src = '/Users/alex/repos/weatherApp/icons/snow-icon.png';
+    image.style.height = '75px';
+    image.style.width = '75px';
+    image.style.padding = '50px';
+  } else {
+    image.src = '/Users/alex/repos/weatherApp/icons/cloudy-icon.png';
+    image.style.height = '75px';
+    image.style.width = '75px';
     image.style.padding = '50px';
   }
   imageContainer.appendChild(image);
