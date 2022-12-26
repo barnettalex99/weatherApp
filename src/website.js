@@ -1,5 +1,6 @@
 const APIurl = 'https://api.openweathermap.org/data/2.5/weather?lat=35.9162&lon=-79.0999&appid=11ffb2188af2c2489b6f36c435f578f4';
 const infoContainer = document.getElementById('info-container');
+const imageContainer = document.getElementById('image-container');
 
 function convertData(data) {
   const {
@@ -48,6 +49,17 @@ function convertTemperature(tempK) {
   return tempF;
 }
 
+function addIcon(descInput) {
+  const image = document.createElement('img');
+  if (descInput === 'Clear') {
+    image.src = '/Users/alex/repos/weatherApp/icons/clear-icon.png';
+    image.style.height = '100px';
+    image.style.width = '100px';
+    image.style.padding = '50px';
+  }
+  imageContainer.appendChild(image);
+}
+
 async function getData() {
   // gets data and saves it in values
   const response = await fetch(APIurl, {
@@ -69,6 +81,7 @@ async function getData() {
   addFeelsLike(feelsLikeValue);
   addWindSpeed(windspeedValue);
   addHumidity(humidityValue);
+  addIcon(descriptionValue);
 }
 
 function initializeWebsite() {

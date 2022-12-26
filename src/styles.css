@@ -1,0 +1,43 @@
+body{
+    height: 100vh;
+    width: 100vw;
+}
+
+#content{
+    background-image: url('/Users/alex/repos/weatherApp/unc-background.jpeg');
+    background-size: cover;
+    background-position: fixed;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 100px 1fr 2fr;
+    font-size: 30px;
+    align-items: center;
+    justify-items: center;
+}
+
+h1{
+    font-size: 55px;
+    grid-row: 1/2;
+}
+
+h2{
+    padding: 30px;
+    font-size: 35px;
+    grid-row: 2/3;
+    font-weight: normal;
+}
+
+#image-container{
+    grid-row: 3/4;
+}
+
+#info-container{
+    grid-row: 4/5;
+}
+
